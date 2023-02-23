@@ -9,6 +9,7 @@ desc    :
 from enum import IntEnum, unique
 
 
+# 菜单栏上科室页签顺序定义，注意要与main.ui上的页面顺序一致
 @unique
 class Depart(IntEnum):
 	ABD = 0
@@ -21,4 +22,6 @@ class Depart(IntEnum):
 	PED = 7
 
 
-# 菜单栏上页签排序
+# 公式系数定义
+VOL_479 = 0.479
+VOL_523 = 0.523
