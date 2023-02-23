@@ -9,8 +9,8 @@ desc    :
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtGui import QIntValidator, QDoubleValidator, QRegExpValidator
-from TestCode.tools.Calculator.ui import smp
-from TestCode.tools.Calculator.base.defcommon import *
+from ui import smp
+from base.defcommon import *
 
 
 class QSmp(QWidget):

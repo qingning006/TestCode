@@ -20,6 +20,11 @@ class Calculator(QMainWindow):
 		self.ui.menu_abd.triggered.connect(self.depart_abd)
 		self.ui.menu_ob.triggered.connect(self.depart_ob)
 		self.ui.menu_gyn.triggered.connect(self.depart_gyn)
+		self.ui.menu_card.triggered.connect(self.depart_card)
+		self.ui.menu_vas.triggered.connect(self.depart_vas)
+		self.ui.menu_uro.triggered.connect(self.depart_uro)
+		self.ui.menu_smp.triggered.connect(self.depart_smp)
+		self.ui.menu_ped.triggered.connect(self.depart_ped)
 
 	def depart_change(self, index=0):
 		print("depart_change")
@@ -34,6 +39,20 @@ class Calculator(QMainWindow):
 	def depart_gyn(self):
 		self.depart_change(Depart.GYN)
 
+	def depart_card(self):
+		self.depart_change(Depart.CARD)
+
+	def depart_vas(self):
+		self.depart_change(Depart.VAS)
+
+	def depart_uro(self):
+		self.depart_change(Depart.URO)
+
+	def depart_smp(self):
+		self.depart_change(Depart.SMP)
+
+	def depart_ped(self):
+		self.depart_change(Depart.PED)
 
 
 if __name__ == '__main__':

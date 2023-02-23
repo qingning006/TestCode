@@ -14,11 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1090, 686)
+        MainWindow.resize(1090, 635)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
-        self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 1091, 641))
+        self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 1091, 591))
         font = QtGui.QFont()
         font.setPointSize(9)
         self.stackedWidget.setFont(font)
@@ -26,9 +26,27 @@ class Ui_MainWindow(object):
         self.page = QAbd()
         self.page.setObjectName("page")
         self.stackedWidget.addWidget(self.page)
-        self.page_2 = QSmp()
+        self.page_2 = QOb()
         self.page_2.setObjectName("page_2")
         self.stackedWidget.addWidget(self.page_2)
+        self.page_3 = QGyn()
+        self.page_3.setObjectName("page_3")
+        self.stackedWidget.addWidget(self.page_3)
+        self.page_4 = QCard()
+        self.page_4.setObjectName("page_4")
+        self.stackedWidget.addWidget(self.page_4)
+        self.page_5 = QVas()
+        self.page_5.setObjectName("page_5")
+        self.stackedWidget.addWidget(self.page_5)
+        self.page_6 = QUro()
+        self.page_6.setObjectName("page_6")
+        self.stackedWidget.addWidget(self.page_6)
+        self.page_7 = QSmp()
+        self.page_7.setObjectName("page_7")
+        self.stackedWidget.addWidget(self.page_7)
+        self.page_8 = QPed()
+        self.page_8.setObjectName("page_8")
+        self.stackedWidget.addWidget(self.page_8)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1090, 27))
@@ -91,4 +109,10 @@ class Ui_MainWindow(object):
         self.menu_smp.setText(_translate("MainWindow", "小器官"))
         self.menu_ped.setText(_translate("MainWindow", "儿科"))
 from depart.QAbd import QAbd
+from depart.QCard import QCard
+from depart.QGyn import QGyn
+from depart.QOb import QOb
+from depart.QPed import QPed
 from depart.QSmp import QSmp
+from depart.QUro import QUro
+from depart.QVas import QVas

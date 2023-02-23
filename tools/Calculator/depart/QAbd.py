@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 author  : YangNana
-filename: QSmp.py
+filename: QAbd.py
 date    : 2023/2/19 20:08
 desc    :
 """
 
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QDialog
-from TestCode.tools.Calculator.ui import abd
+from ui import abd
 
 
 class QAbd(QWidget):

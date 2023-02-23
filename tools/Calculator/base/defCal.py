@@ -15,10 +15,10 @@ class Depart(IntEnum):
 	OB = 1
 	GYN = 2
 	CARD = 3
-	VAS = 5
-	URO = 6
-	SMP = 7
-	PED = 8
+	VAS = 4
+	URO = 5
+	SMP = 6
+	PED = 7
 
 
 # 菜单栏上页签排序
