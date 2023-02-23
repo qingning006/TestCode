@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1090</width>
+    <height>686</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1091</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <widget class="QAbd" name="page"/>
+    <widget class="QSmp" name="page_2"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1090</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string> 科室测量 </string>
+    </property>
+    <addaction name="menu_abd"/>
+    <addaction name="menu_ob"/>
+    <addaction name="menu_gyn"/>
+    <addaction name="menu_card"/>
+    <addaction name="menu_vas"/>
+    <addaction name="menu_uro"/>
+    <addaction name="menu_smp"/>
+    <addaction name="menu_ped"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string> 特殊测量 </string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="menu_abd">
+   <property name="text">
+    <string>腹部</string>
+   </property>
+  </action>
+  <action name="menu_ob">
+   <property name="text">
+    <string>产科</string>
+   </property>
+  </action>
+  <action name="menu_gyn">
+   <property name="text">
+    <string>妇科</string>
+   </property>
+  </action>
+  <action name="menu_card">
+   <property name="text">
+    <string>心脏</string>
+   </property>
+  </action>
+  <action name="menu_vas">
+   <property name="text">
+    <string>血管</string>
+   </property>
+  </action>
+  <action name="menu_uro">
+   <property name="text">
+    <string>泌尿</string>
+   </property>
+  </action>
+  <action name="menu_smp">
+   <property name="text">
+    <string>小器官</string>
+   </property>
+  </action>
+  <action name="menu_ped">
+   <property name="text">
+    <string>儿科</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QSmp</class>
+   <extends>QWidget</extends>
+   <header>depart.QSmp</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QAbd</class>
+   <extends>QWidget</extends>
+   <header>depart.QAbd</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
