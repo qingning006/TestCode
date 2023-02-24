@@ -1,27 +1,27 @@
 # -*- coding: utf-8 -*-
 """
 author  : YangNana
-filename: QAbd.py
+filename: QZScore.py
 date    : 2023/2/19 20:08
 desc    :
 """
 
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget
-from ui import abd
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QDialog
+from ui import zscore
 
 
-class QAbd(QWidget):
+class QZScore(QWidget):
 	def __init__(self):
 		# 实例化一个 Ui_MainWindow对象
 		super().__init__()
-		self.ui = abd.Ui_Form()
+		self.ui = zscore.Ui_Form()
 		self.ui.setupUi(self)
 
 
 if __name__ == '__main__':
 	app = QApplication([])
-	stats = QAbd()
+	stats = QZScore()
 	stats.show()
 	app.exec_()
 	pass

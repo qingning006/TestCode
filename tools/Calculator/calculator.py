@@ -1,7 +1,6 @@
 
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow
 from ui import main
-from base.defCal import Depart
 
 
 class Calculator(QMainWindow):
@@ -25,34 +24,47 @@ class Calculator(QMainWindow):
 		self.ui.menu_uro.triggered.connect(self.depart_uro)
 		self.ui.menu_smp.triggered.connect(self.depart_smp)
 		self.ui.menu_ped.triggered.connect(self.depart_ped)
+		self.ui.meas_zscore.triggered.connect(self.meas_zscore)
 
 	def depart_change(self, index=0):
 		print("depart_change")
 		self.ui.stackedWidget.setCurrentIndex(index)
 
 	def depart_abd(self):
-		self.depart_change(Depart.ABD)
+		#self.depart_change(Depart.ABD)
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_abd)
 
 	def depart_ob(self):
-		self.depart_change(Depart.OB)
+		#self.depart_change(Depart.OB)
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_ob)
 
 	def depart_gyn(self):
-		self.depart_change(Depart.GYN)
+		#self.depart_change(Depart.GYN)
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_gyn)
 
 	def depart_card(self):
-		self.depart_change(Depart.CARD)
+		#self.depart_change(Depart.CARD)
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_card)
 
 	def depart_vas(self):
-		self.depart_change(Depart.VAS)
+		#self.depart_change(Depart.VAS)
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_vas)
 
 	def depart_uro(self):
-		self.depart_change(Depart.URO)
+		#self.depart_change(Depart.URO)
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_uro)
 
 	def depart_smp(self):
-		self.depart_change(Depart.SMP)
+		#self.depart_change(Depart.SMP)
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_smp)
 
 	def depart_ped(self):
-		self.depart_change(Depart.PED)
+		#self.depart_change(Depart.PED)
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_ped)
+
+	def meas_zscore(self):
+		#self.depart_change(Depart.PED)
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_zscore)
 
 
 if __name__ == '__main__':

@@ -28,14 +28,15 @@
       <pointsize>9</pointsize>
      </font>
     </property>
-    <widget class="QAbd" name="page"/>
-    <widget class="QOb" name="page_2"/>
-    <widget class="QGyn" name="page_3"/>
-    <widget class="QCard" name="page_4"/>
-    <widget class="QVas" name="page_5"/>
-    <widget class="QUro" name="page_6"/>
-    <widget class="QSmp" name="page_7"/>
-    <widget class="QPed" name="page_8"/>
+    <widget class="QAbd" name="page_abd"/>
+    <widget class="QOb" name="page_ob"/>
+    <widget class="QGyn" name="page_gyn"/>
+    <widget class="QCard" name="page_card"/>
+    <widget class="QVas" name="page_vas"/>
+    <widget class="QUro" name="page_uro"/>
+    <widget class="QSmp" name="page_smp"/>
+    <widget class="QPed" name="page_ped"/>
+    <widget class="QZScore" name="page_zscore"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -74,6 +75,7 @@
     <property name="title">
      <string> 特殊测量 </string>
     </property>
+    <addaction name="meas_zscore"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -117,6 +119,11 @@
   <action name="menu_ped">
    <property name="text">
     <string>儿科</string>
+   </property>
+  </action>
+  <action name="meas_zscore">
+   <property name="text">
+    <string>心脏Z评分</string>
    </property>
   </action>
  </widget>
@@ -167,6 +174,12 @@
    <class>QPed</class>
    <extends>QWidget</extends>
    <header>depart.QPed</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QZScore</class>
+   <extends>QWidget</extends>
+   <header location="global">specialmeas.QZScore</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
