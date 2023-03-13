@@ -28,15 +28,16 @@
       <pointsize>9</pointsize>
      </font>
     </property>
-    <widget class="QAbd" name="page_abd"/>
-    <widget class="QOb" name="page_ob"/>
-    <widget class="QGyn" name="page_gyn"/>
-    <widget class="QCard" name="page_card"/>
-    <widget class="QVas" name="page_vas"/>
-    <widget class="QUro" name="page_uro"/>
-    <widget class="QSmp" name="page_smp"/>
-    <widget class="QPed" name="page_ped"/>
-    <widget class="QZScore" name="page_zscore"/>
+    <widget class="Abd" name="page_abd"/>
+    <widget class="Ob" name="page_ob"/>
+    <widget class="Gyn" name="page_gyn"/>
+    <widget class="Card" name="page_card"/>
+    <widget class="Vas" name="page_vas"/>
+    <widget class="Uro" name="page_uro"/>
+    <widget class="Smp" name="page_smp"/>
+    <widget class="Ped" name="page_ped"/>
+    <widget class="ZScore" name="page_zscore"/>
+    <widget class="GA" name="page_ga"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -75,7 +76,8 @@
     <property name="title">
      <string> 特殊测量 </string>
     </property>
-    <addaction name="meas_zscore"/>
+    <addaction name="menu_zscore"/>
+    <addaction name="menu_ga"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -121,65 +123,76 @@
     <string>儿科</string>
    </property>
   </action>
-  <action name="meas_zscore">
+  <action name="menu_zscore">
    <property name="text">
     <string>心脏Z评分</string>
+   </property>
+  </action>
+  <action name="menu_ga">
+   <property name="text">
+    <string>产科孕龄</string>
    </property>
   </action>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QSmp</class>
+   <class>Smp</class>
    <extends>QWidget</extends>
-   <header>depart.QSmp</header>
+   <header>depart.Smp</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>QAbd</class>
+   <class>Abd</class>
    <extends>QWidget</extends>
-   <header>depart.QAbd</header>
+   <header>depart.Abd</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>QGyn</class>
+   <class>Gyn</class>
    <extends>QWidget</extends>
-   <header>depart.QGyn</header>
+   <header>depart.Gyn</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>QCard</class>
+   <class>Card</class>
    <extends>QWidget</extends>
-   <header>depart.QCard</header>
+   <header>depart.Card</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>QVas</class>
+   <class>Vas</class>
    <extends>QWidget</extends>
-   <header>depart.QVas</header>
+   <header>depart.Vas</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>QOb</class>
+   <class>Ob</class>
    <extends>QWidget</extends>
-   <header>depart.QOb</header>
+   <header>depart.Ob</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>QUro</class>
+   <class>Uro</class>
    <extends>QWidget</extends>
-   <header>depart.QUro</header>
+   <header>depart.Uro</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>QPed</class>
+   <class>Ped</class>
    <extends>QWidget</extends>
-   <header>depart.QPed</header>
+   <header>depart.Ped</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>QZScore</class>
+   <class>ZScore</class>
    <extends>QWidget</extends>
-   <header location="global">specialmeas.QZScore</header>
+   <header>depart.Card</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GA</class>
+   <extends>QWidget</extends>
+   <header>depart.Ob</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

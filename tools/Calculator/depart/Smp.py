@@ -9,17 +9,17 @@ desc    :
 
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtGui import QIntValidator, QDoubleValidator, QRegExpValidator
-from ui import smp
+from ui import ui_smp
 from base.log import *
-from base.apiformula import *
+from base.defformula import *
 from base.defCal import *
 
 
-class QSmp(QWidget):
+class Smp(QWidget):
 	def __init__(self):
 		# 实例化一个 Ui_MainWindow对象
 		super().__init__()
-		self.ui = smp.Ui_Form()
+		self.ui = ui_smp.Ui_Form()
 		self.ui.setupUi(self)
 
 		self.init_validator()
@@ -43,21 +43,26 @@ class QSmp(QWidget):
 		self.ui.thy_d3.setValidator(double_valid)
 
 	def update_smp_vol(self):
-		if self.ui.thy_d1.text() == "" or self.ui.thy_d2.text() == "" or self.ui.thy_d3.text() == "":
+		self.update_vol_3d(self.ui.thy_d1, self.ui.thy_d2, self.ui.thy_d3, self.ui.thy_v1, "甲状腺", VOL_479)
+		self.update_vol_3d(self.ui.thy_d1, self.ui.thy_d2, self.ui.thy_d3, self.ui.thy_v2, "甲状腺", VOL_523)
+
+	def update_vol_3d(self, dist1, dist2, dist3, vol, name=None, coe=VOL_Normal):
+		# 长宽厚有一个为空，则清空体积
+		if dist1.text() == "" or dist2.text() == "" or dist3.text() == "":
+			vol.setText("")
 			return
-		d1 = float(self.ui.thy_d1.text()) if self.ui.thy_d1.text() != "" else 0.0
-		d2 = float(self.ui.thy_d2.text()) if self.ui.thy_d2.text() != "" else 0.0
-		d3 = float(self.ui.thy_d3.text()) if self.ui.thy_d3.text() != "" else 0.0
-		v1 = vol_3d(d1, d2, d2, VOL_479)
-		self.ui.thy_v1.setText(str(v1))
-		v2 = vol_3d(d1, d2, d2, VOL_523)
-		self.ui.thy_v2.setText(str(v2))
-		write_log(f' 甲状腺体积：{d1} * {d2} * {d3} * 0.479 = {v1},  {d1} * {d2} * {d3} * 0.523 = {v2}')
+		d1 = float(dist1.text()) if dist1.text() != "" else 0.0
+		d2 = float(dist2.text()) if dist2.text() != "" else 0.0
+		d3 = float(dist3.text()) if dist3.text() != "" else 0.0
+		v1 = vol_3d(d1, d2, d2, coe)
+		vol.setText(str(v1))
+		write_log(f' {name}体积：{d1} * {d2} * {d3} * {coe} = {v1}')
+		#get_logger().info(f' {name}体积：{d1} * {d2} * {d3} * {coe} = {v1}')
 
 
 if __name__ == '__main__':
 	app = QApplication([])
-	stats = QSmp()
+	stats = Smp()
 	stats.show()
 	app.exec_()
 	pass

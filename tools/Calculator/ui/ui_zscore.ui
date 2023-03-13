@@ -54,7 +54,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_2008">
       <attribute name="title">
@@ -63,7 +63,7 @@
      </widget>
      <widget class="QWidget" name="tab_2013">
       <attribute name="title">
-       <string>Pattern 2013</string>
+       <string>Pattersen 2013</string>
       </attribute>
      </widget>
     </widget>

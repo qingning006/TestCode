@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'card.ui'
+# Form implementation generated from reading ui file 'ui_card.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #

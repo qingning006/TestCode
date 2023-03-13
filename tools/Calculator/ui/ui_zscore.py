@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'zscore.ui'
+# Form implementation generated from reading ui file 'ui_zscore.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -42,12 +42,12 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
         self.tabWidget.setCurrentIndex(0)
-        self.tabWidget_2.setCurrentIndex(0)
+        self.tabWidget_2.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_2008), _translate("Form", "Bei xia 2008"))
-        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_2013), _translate("Form", "Pattern 2013"))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_2013), _translate("Form", "Pattersen 2013"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_card), _translate("Form", "Z评分"))

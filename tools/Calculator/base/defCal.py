@@ -7,6 +7,7 @@ desc    :
 """
 
 from enum import IntEnum, unique
+import math
 
 
 # 菜单栏上科室页签顺序定义，注意要与main.ui上的页面顺序一致
@@ -23,5 +24,6 @@ class Depart(IntEnum):
 
 
 # 公式系数定义
+VOL_Normal = math.pi/6
 VOL_479 = 0.479
 VOL_523 = 0.523

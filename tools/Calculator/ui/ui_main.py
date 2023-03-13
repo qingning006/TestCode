@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'main.ui'
+# Form implementation generated from reading ui file 'ui_main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -23,33 +23,36 @@ class Ui_MainWindow(object):
         font.setPointSize(9)
         self.stackedWidget.setFont(font)
         self.stackedWidget.setObjectName("stackedWidget")
-        self.page_abd = QAbd()
+        self.page_abd = Abd()
         self.page_abd.setObjectName("page_abd")
         self.stackedWidget.addWidget(self.page_abd)
-        self.page_ob = QOb()
+        self.page_ob = Ob()
         self.page_ob.setObjectName("page_ob")
         self.stackedWidget.addWidget(self.page_ob)
-        self.page_gyn = QGyn()
+        self.page_gyn = Gyn()
         self.page_gyn.setObjectName("page_gyn")
         self.stackedWidget.addWidget(self.page_gyn)
-        self.page_card = QCard()
+        self.page_card = Card()
         self.page_card.setObjectName("page_card")
         self.stackedWidget.addWidget(self.page_card)
-        self.page_vas = QVas()
+        self.page_vas = Vas()
         self.page_vas.setObjectName("page_vas")
         self.stackedWidget.addWidget(self.page_vas)
-        self.page_uro = QUro()
+        self.page_uro = Uro()
         self.page_uro.setObjectName("page_uro")
         self.stackedWidget.addWidget(self.page_uro)
-        self.page_smp = QSmp()
+        self.page_smp = Smp()
         self.page_smp.setObjectName("page_smp")
         self.stackedWidget.addWidget(self.page_smp)
-        self.page_ped = QPed()
+        self.page_ped = Ped()
         self.page_ped.setObjectName("page_ped")
         self.stackedWidget.addWidget(self.page_ped)
-        self.page_zscore = QZScore()
+        self.page_zscore = ZScore()
         self.page_zscore.setObjectName("page_zscore")
         self.stackedWidget.addWidget(self.page_zscore)
+        self.page_ga = GA()
+        self.page_ga.setObjectName("page_ga")
+        self.stackedWidget.addWidget(self.page_ga)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1090, 27))
@@ -84,8 +87,10 @@ class Ui_MainWindow(object):
         self.menu_smp.setObjectName("menu_smp")
         self.menu_ped = QtWidgets.QAction(MainWindow)
         self.menu_ped.setObjectName("menu_ped")
-        self.meas_zscore = QtWidgets.QAction(MainWindow)
-        self.meas_zscore.setObjectName("meas_zscore")
+        self.menu_zscore = QtWidgets.QAction(MainWindow)
+        self.menu_zscore.setObjectName("menu_zscore")
+        self.menu_ga = QtWidgets.QAction(MainWindow)
+        self.menu_ga.setObjectName("menu_ga")
         self.menu.addAction(self.menu_abd)
         self.menu.addAction(self.menu_ob)
         self.menu.addAction(self.menu_gyn)
@@ -94,7 +99,8 @@ class Ui_MainWindow(object):
         self.menu.addAction(self.menu_uro)
         self.menu.addAction(self.menu_smp)
         self.menu.addAction(self.menu_ped)
-        self.menu_2.addAction(self.meas_zscore)
+        self.menu_2.addAction(self.menu_zscore)
+        self.menu_2.addAction(self.menu_ga)
         self.menubar.addAction(self.menu.menuAction())
         self.menubar.addAction(self.menu_2.menuAction())
 
@@ -114,13 +120,13 @@ class Ui_MainWindow(object):
         self.menu_uro.setText(_translate("MainWindow", "泌尿"))
         self.menu_smp.setText(_translate("MainWindow", "小器官"))
         self.menu_ped.setText(_translate("MainWindow", "儿科"))
-        self.meas_zscore.setText(_translate("MainWindow", "心脏Z评分"))
-from depart.QAbd import QAbd
-from depart.QCard import QCard
-from depart.QGyn import QGyn
-from depart.QOb import QOb
-from depart.QPed import QPed
-from depart.QSmp import QSmp
-from depart.QUro import QUro
-from depart.QVas import QVas
-from specialmeas.QZScore import QZScore
+        self.menu_zscore.setText(_translate("MainWindow", "心脏Z评分"))
+        self.menu_ga.setText(_translate("MainWindow", "产科孕龄"))
+from depart.Abd import Abd
+from depart.Card import Card, ZScore
+from depart.Gyn import Gyn
+from depart.Ob import GA, Ob
+from depart.Ped import Ped
+from depart.Smp import Smp
+from depart.Uro import Uro
+from depart.Vas import Vas

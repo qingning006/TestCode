@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'gyn.ui'
+# Form implementation generated from reading ui file 'ui_ob.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -21,12 +21,12 @@ class Ui_Form(object):
         font.setPointSize(12)
         self.tabWidget.setFont(font)
         self.tabWidget.setObjectName("tabWidget")
-        self.tab_gyn = QtWidgets.QWidget()
+        self.tab_ob = QtWidgets.QWidget()
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.tab_gyn.setFont(font)
-        self.tab_gyn.setObjectName("tab_gyn")
-        self.tabWidget_2 = QtWidgets.QTabWidget(self.tab_gyn)
+        self.tab_ob.setFont(font)
+        self.tab_ob.setObjectName("tab_ob")
+        self.tabWidget_2 = QtWidgets.QTabWidget(self.tab_ob)
         self.tabWidget_2.setGeometry(QtCore.QRect(10, 10, 971, 461))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -41,7 +41,7 @@ class Ui_Form(object):
         self.tab_ob_m = QtWidgets.QWidget()
         self.tab_ob_m.setObjectName("tab_ob_m")
         self.tabWidget_2.addTab(self.tab_ob_m, "")
-        self.tabWidget.addTab(self.tab_gyn, "")
+        self.tabWidget.addTab(self.tab_ob, "")
 
         self.retranslateUi(Form)
         self.tabWidget.setCurrentIndex(0)
@@ -54,4 +54,4 @@ class Ui_Form(object):
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_ob_b), _translate("Form", "B模式"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_ob_d), _translate("Form", "D模式"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_ob_m), _translate("Form", "M模式"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_gyn), _translate("Form", "妇科"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_ob), _translate("Form", "产科"))

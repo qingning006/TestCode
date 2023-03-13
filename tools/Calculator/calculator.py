@@ -1,13 +1,13 @@
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from ui import main
+from ui import ui_main
 
 
 class Calculator(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		# 实例化一个 Ui_MainWindow对象
-		self.ui = main.Ui_MainWindow()
+		self.ui = ui_main.Ui_MainWindow()
 		self.ui.setupUi(self)
 		# 这里使用的是 self.show(),和之后的区分一下
 		self.show()
@@ -24,7 +24,8 @@ class Calculator(QMainWindow):
 		self.ui.menu_uro.triggered.connect(self.depart_uro)
 		self.ui.menu_smp.triggered.connect(self.depart_smp)
 		self.ui.menu_ped.triggered.connect(self.depart_ped)
-		self.ui.meas_zscore.triggered.connect(self.meas_zscore)
+		self.ui.menu_zscore.triggered.connect(self.meas_zscore)
+		self.ui.menu_ga.triggered.connect(self.meas_ga)
 
 	def depart_change(self, index=0):
 		print("depart_change")
@@ -63,8 +64,10 @@ class Calculator(QMainWindow):
 		self.ui.stackedWidget.setCurrentWidget(self.ui.page_ped)
 
 	def meas_zscore(self):
-		#self.depart_change(Depart.PED)
 		self.ui.stackedWidget.setCurrentWidget(self.ui.page_zscore)
+
+	def meas_ga(self):
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_ga)
 
 
 if __name__ == '__main__':
