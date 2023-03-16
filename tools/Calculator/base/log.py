@@ -34,7 +34,7 @@ logger.addHandler(console_handler)
 
 
 # 写日志
-def write_log(content):
+def Log(content):
 	logger.info(content)
 
 
