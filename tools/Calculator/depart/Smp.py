@@ -47,16 +47,16 @@ class Smp(QWidget):
 		self.update_vol_3d(self.ui.thy_d1, self.ui.thy_d2, self.ui.thy_d3, self.ui.thy_v2, "甲状腺", VOL_523)
 
 	def update_vol_3d(self, dist1, dist2, dist3, vol, name=None, coe=VOL_Normal):
+		vol.setText("")
 		# 长宽厚有一个为空，则清空体积
 		if dist1.text() == "" or dist2.text() == "" or dist3.text() == "":
-			vol.setText("")
 			return
 		d1 = float(dist1.text()) if dist1.text() != "" else 0.0
 		d2 = float(dist2.text()) if dist2.text() != "" else 0.0
 		d3 = float(dist3.text()) if dist3.text() != "" else 0.0
 		v1 = vol_3d(d1, d2, d2, coe)
 		vol.setText(str(v1))
-		write_log(f' {name}体积：{d1} * {d2} * {d3} * {coe} = {v1}')
+		Log(f' {name}体积：{d1} * {d2} * {d3} * {coe} = {v1}')
 		#get_logger().info(f' {name}体积：{d1} * {d2} * {d3} * {coe} = {v1}')
 
 

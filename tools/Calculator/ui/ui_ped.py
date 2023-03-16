@@ -119,7 +119,7 @@ class Ui_Form(object):
         self.label_14.setGeometry(QtCore.QRect(10, 160, 51, 25))
         self.label_14.setObjectName("label_14")
         self.text_dradio = QtWidgets.QTextBrowser(self.groupBox_2)
-        self.text_dradio.setGeometry(QtCore.QRect(60, 110, 81, 31))
+        self.text_dradio.setGeometry(QtCore.QRect(60, 110, 111, 31))
         self.text_dradio.setObjectName("text_dradio")
         self.tabWidget_2.addTab(self.tab_ped_b, "")
         self.tabWidget.addTab(self.tab_ped, "")

@@ -8,14 +8,14 @@ desc    :
 
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QDialog
-from ui import zscore
+from ui import ui_zscore
 
 
 class QZScore(QWidget):
 	def __init__(self):
 		# 实例化一个 Ui_MainWindow对象
 		super().__init__()
-		self.ui = zscore.Ui_Form()
+		self.ui = ui_zscore.Ui_Form()
 		self.ui.setupUi(self)
 
 
