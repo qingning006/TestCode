@@ -9,10 +9,10 @@ desc    :
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtGui import QDoubleValidator, QIntValidator
 from ui import ui_ped
-from base.log import *
+from base.base import Base
 
 
-class Ped(QWidget):
+class Ped(QWidget, Base):
 	def __init__(self):
 		# 实例化一个 Ui_MainWindow对象
 		super().__init__()
@@ -93,7 +93,7 @@ class Ped(QWidget):
 
 		self.ui.text_type.setText(str_type)
 		self.ui.text_desc_graf.setText(str_desc)
-		Log(f' 小儿髋关节Graf分型：α：{angle_a}°, β：{angle_b}°,  分型：{str_type},  描述：{str_desc}')
+		self.log.info(f' 小儿髋关节Graf分型：α：{angle_a}°, β：{angle_b}°,  分型：{str_type},  描述：{str_desc}')
 
 	def update_fhc(self):
 		# 先清空分型和描述
@@ -119,7 +119,7 @@ class Ped(QWidget):
 		str_radio = "%.3f" % dist_radio
 		self.ui.text_dradio.setText(str_radio)
 		self.ui.text_desc_fhc.setText(str_desc)
-		Log(f' 小儿髋关节FHC分型：d：{dist_d1}°, D：{dist_d2}°, FHC：{str_radio} , 描述：{str_desc}')
+		self.log.info(f' 小儿髋关节FHC分型：d：{dist_d1}°, D：{dist_d2}°, FHC：{str_radio} , 描述：{str_desc}')
 
 
 if __name__ == '__main__':

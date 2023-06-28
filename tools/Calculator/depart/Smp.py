@@ -10,12 +10,12 @@ desc    :
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtGui import QIntValidator, QDoubleValidator, QRegExpValidator
 from ui import ui_smp
-from base.log import *
+from base.base import Base
 from base.defformula import *
 from base.defCal import *
 
 
-class Smp(QWidget):
+class Smp(QWidget, Base):
 	def __init__(self):
 		# 实例化一个 Ui_MainWindow对象
 		super().__init__()
@@ -56,8 +56,7 @@ class Smp(QWidget):
 		d3 = float(dist3.text()) if dist3.text() != "" else 0.0
 		v1 = vol_3d(d1, d2, d2, coe)
 		vol.setText(str(v1))
-		Log(f' {name}体积：{d1} * {d2} * {d3} * {coe} = {v1}')
-		#get_logger().info(f' {name}体积：{d1} * {d2} * {d3} * {coe} = {v1}')
+		self.log.info(f' {name}体积：{d1} * {d2} * {d3} * {coe} = {v1}')
 
 
 if __name__ == '__main__':
