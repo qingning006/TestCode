@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1032</width>
-    <height>573</height>
+    <width>1239</width>
+    <height>858</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>1001</width>
-     <height>521</height>
+     <width>1131</width>
+     <height>801</height>
     </rect>
    </property>
    <property name="font">
@@ -39,177 +39,1046 @@
     <attribute name="title">
      <string>孕龄</string>
     </attribute>
-    <widget class="QLabel" name="label">
+    <widget class="QGroupBox" name="groupBox">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>50</y>
-       <width>54</width>
-       <height>20</height>
+       <x>10</x>
+       <y>10</y>
+       <width>251</width>
+       <height>121</height>
       </rect>
      </property>
-     <property name="text">
-      <string>测量项</string>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
      </property>
+     <property name="title">
+      <string>患者数据</string>
+     </property>
+     <widget class="QDateEdit" name="dateEdit_LMP">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>30</y>
+        <width>110</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbox_LMP">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>末次月经</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>受精日期</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_GA">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>101</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>GA(LMP)：</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_EDD">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>101</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>EDD(LMP)：</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_LMP_GA">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>91</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_LMP_EDD">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>90</y>
+        <width>101</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>80</y>
-       <width>54</width>
-       <height>25</height>
+       <x>270</x>
+       <y>10</y>
+       <width>261</width>
+       <height>121</height>
       </rect>
      </property>
-     <property name="text">
-      <string>BPD</string>
+     <property name="title">
+      <string>AUA/CUA</string>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>40</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>AUA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_GA_AUA">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_GA_CUA">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>40</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CUA</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbox_fml_CUA">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>70</y>
+        <width>131</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>AC,FL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,AC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,AC,FL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,FL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,HC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,HC,AC,FL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,HC,FL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HC,AC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HC,AC,BPD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HC,AC,FL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HC,FL</string>
+       </property>
+      </item>
+     </widget>
     </widget>
-    <widget class="QLabel" name="label_5">
+    <widget class="QGroupBox" name="groupBox_3">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>50</y>
-       <width>54</width>
-       <height>20</height>
+       <x>540</x>
+       <y>10</y>
+       <width>531</width>
+       <height>121</height>
       </rect>
      </property>
-     <property name="text">
-      <string>公式</string>
+     <property name="title">
+      <string>EFW</string>
      </property>
+     <widget class="QComboBox" name="cmbox_fml_EFW">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>21</y>
+        <width>221</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>AC(Campbell)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AC,BPD (Hadlock)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AC,BPD(Merz)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AC,BPD(Shepard)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AC,FL(Hadlock1)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,AC,FL(Hadlock2)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,APTD,TTD,FL(Shinozuka1)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,APTD,TTD,FL(Tokyo)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,APTD,TTD,LV(Shinozuka3)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,FL,AC(JSUM)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,FL,AC(Shinozuka2)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,FTA,FL(Osaka)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,HC,AC,FL(Hadlock4)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,MAD(Persson2)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,MAD,FL(Persson1)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BPD,TTD(Hansmann)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HC,AC,FL(Hadlock3)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HC,AC,FL(Schild)</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>21</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>EFW</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_efw_g">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>21</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_efw_g_sd">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>20</y>
+        <width>81</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_efw_ga_range">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>50</y>
+        <width>81</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_efw_ga">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>51</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>51</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>GA(EFW)</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbox_fml_EFW_2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>51</y>
+        <width>221</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Hadlock</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>JSUM 2001</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Osaka</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shinozuka</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tokyo</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>生长误差</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbox_fml_EFW_3">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>80</y>
+        <width>221</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Alexander</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ananth Tw(D)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ananth Tw(M)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bourgogne</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Brenner</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Doubilet</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Eik-Nes</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hadlock</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hansmann (86)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hansmann</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HobbinsPersutte</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>INTERGROWTH 21st</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Johnsen(f)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Johnsen(m)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Johnsen</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SUM 2001</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kramer(f)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kramer(m)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Osaka</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tokyo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TokyoShinozuka</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>WHO</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Williams</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Yarkoni (TWINS)</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_efw_sd">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>80</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_efw_sd_percen">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>79</y>
+        <width>81</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+     </widget>
     </widget>
-    <widget class="QLabel" name="label_6">
+    <widget class="QGroupBox" name="groupBox_4">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>50</y>
-       <width>54</width>
-       <height>20</height>
+       <x>10</x>
+       <y>140</y>
+       <width>851</width>
+       <height>401</height>
       </rect>
      </property>
-     <property name="text">
+     <property name="title">
       <string>测量值</string>
      </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>50</y>
-       <width>54</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>GA</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>50</y>
-       <width>54</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>EDD</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>80</y>
-       <width>100</width>
-       <height>25</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>80</y>
-       <width>71</width>
-       <height>25</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>80</y>
-       <width>31</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>mm</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_GA_BPD">
-     <property name="geometry">
-      <rect>
-       <x>360</x>
-       <y>80</y>
-       <width>101</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_EDD_BPD">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>80</y>
-       <width>101</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>80</y>
-       <width>21</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>15</x>
-       <y>50</y>
-       <width>31</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>AUA</string>
-     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>70</y>
+        <width>54</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>BPD</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>40</y>
+        <width>54</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>公式</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>40</y>
+        <width>54</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>测量值</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_bpd">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>70</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>70</y>
+        <width>31</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>mm</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>40</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>AUA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>40</y>
+        <width>54</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>GA</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbox_bpd_fml">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>70</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>54</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>测量项</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ckbox_bpd">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>70</y>
+        <width>21</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>40</y>
+        <width>71</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>范围</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_bpd_ga">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>70</y>
+        <width>81</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_bpd_ga_range">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>70</y>
+        <width>91</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>40</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>生长误差SD</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_bpd_ga_sd">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>70</y>
+        <width>91</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_bpd_ga_percen">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>70</y>
+        <width>91</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>40</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>生长误差%</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_hc">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>100</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbox_hc_fml">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>100</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>100</y>
+        <width>54</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>HC</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_ac">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>130</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>130</y>
+        <width>54</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>AC</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbox_ac_fml">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>130</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_fl">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>160</y>
+        <width>71</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>160</y>
+        <width>54</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>FL</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbox_fl_fml">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>160</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ckbox_hc">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>21</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ckbox_ac">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>21</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ckbox_fl">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>160</y>
+        <width>21</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
