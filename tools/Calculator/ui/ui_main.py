@@ -14,11 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1103, 802)
+        MainWindow.resize(1177, 802)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
-        self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 1091, 591))
+        self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 1151, 731))
         font = QtGui.QFont()
         font.setPointSize(9)
         self.stackedWidget.setFont(font)
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.page_ga)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1103, 27))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1177, 27))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.menubar.setFont(font)

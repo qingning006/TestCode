@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1027</width>
-    <height>741</height>
+    <width>1203</width>
+    <height>828</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>1001</width>
-     <height>711</height>
+     <width>1131</width>
+     <height>741</height>
     </rect>
    </property>
    <property name="font">
@@ -44,8 +44,8 @@
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>971</width>
-       <height>671</height>
+       <width>1101</width>
+       <height>691</height>
       </rect>
      </property>
      <property name="font">
@@ -54,7 +54,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_2008">
       <attribute name="title">
@@ -73,16 +73,6 @@
         <string>身 高：</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_2008_height">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>10</y>
-         <width>51</width>
-         <height>25</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_4">
        <property name="geometry">
         <rect>
@@ -93,7 +83,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>cm</string>
+        <string> cm</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_5">
@@ -106,7 +96,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>kg</string>
+        <string> kg</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_6">
@@ -114,22 +104,12 @@
         <rect>
          <x>190</x>
          <y>10</y>
-         <width>51</width>
+         <width>41</width>
          <height>25</height>
         </rect>
        </property>
        <property name="text">
         <string>体 重：</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_2008_weight">
-       <property name="geometry">
-        <rect>
-         <x>240</x>
-         <y>10</y>
-         <width>51</width>
-         <height>25</height>
-        </rect>
        </property>
       </widget>
       <widget class="QLabel" name="label_7">
@@ -150,22 +130,12 @@
         <rect>
          <x>370</x>
          <y>10</y>
-         <width>51</width>
+         <width>41</width>
          <height>25</height>
         </rect>
        </property>
        <property name="text">
         <string>BSA：</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_2008_bsa">
-       <property name="geometry">
-        <rect>
-         <x>420</x>
-         <y>10</y>
-         <width>51</width>
-         <height>25</height>
-        </rect>
        </property>
       </widget>
       <widget class="QTableWidget" name="table_2008">
@@ -174,7 +144,7 @@
          <x>10</x>
          <y>50</y>
          <width>941</width>
-         <height>591</height>
+         <height>611</height>
         </rect>
        </property>
       </widget>
@@ -191,11 +161,274 @@
         <string>BSA=</string>
        </property>
       </widget>
+      <widget class="QDoubleSpinBox" name="double_2008_height">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="maximum">
+        <double>99999.990000000005239</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="double_2008_weight">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="maximum">
+        <double>99999.990000000005239</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="double_2008_bsa">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="maximum">
+        <double>99999.990000000005239</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_2013">
       <attribute name="title">
        <string>Pattersen 2013</string>
       </attribute>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>10</y>
+         <width>51</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string> kg</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>10</y>
+         <width>51</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string> cm</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>10</y>
+         <width>51</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>m²</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>51</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>身 高：</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="table_2013">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>1081</width>
+         <height>611</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2013_bsa_formula">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>411</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BSA=</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>10</y>
+         <width>51</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BSA：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>10</y>
+         <width>51</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>体 重：</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="double_2013_height">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="maximum">
+        <double>99999.990000000005239</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="double_2013_weight">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="maximum">
+        <double>99999.990000000005239</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="double_2013_bsa">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="maximum">
+        <double>99999.990000000005239</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+      </widget>
      </widget>
     </widget>
    </widget>
