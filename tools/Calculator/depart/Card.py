@@ -162,11 +162,6 @@ class ZScore(QWidget, Base):
         self.ui.double_2013_height.textChanged.connect(self.update_2013_bsa)
         self.ui.double_2013_weight.textChanged.connect(self.update_2013_bsa)
 
-        self.ui.double_2013_weight.setValue(10)
-        self.ui.double_2013_height.setValue(100)
-        self.update_2013_bsa()
-
-
     def update_2013_bsa(self):
         self.ui.double_2013_bsa.setValue(0.0)
         w = self.ui.double_2013_weight.value()
