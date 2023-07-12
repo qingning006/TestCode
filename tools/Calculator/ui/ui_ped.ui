@@ -50,7 +50,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>10</pointsize>
+       <pointsize>12</pointsize>
       </font>
      </property>
      <property name="currentIndex">
@@ -60,16 +60,6 @@
       <attribute name="title">
        <string>B模式</string>
       </attribute>
-      <widget class="QLineEdit" name="lineEdit_year">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>20</y>
-         <width>41</width>
-         <height>25</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
@@ -109,23 +99,13 @@
         <string>月</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_month">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>20</y>
-         <width>41</width>
-         <height>25</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QGroupBox" name="groupBox">
        <property name="geometry">
         <rect>
          <x>10</x>
          <y>60</y>
-         <width>300</width>
-         <height>260</height>
+         <width>321</width>
+         <height>321</height>
         </rect>
        </property>
        <property name="title">
@@ -134,8 +114,8 @@
        <widget class="QLabel" name="label_7">
         <property name="geometry">
          <rect>
-          <x>130</x>
-          <y>80</y>
+          <x>150</x>
+          <y>70</y>
           <width>21</width>
           <height>25</height>
          </rect>
@@ -153,7 +133,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
+          <y>30</y>
           <width>51</width>
           <height>25</height>
          </rect>
@@ -162,37 +142,29 @@
          <string>Hip-α</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_2">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>10</y>
-          <width>60</width>
-          <height>25</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>测量值</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_4">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>160</y>
-          <width>51</width>
+          <y>150</y>
+          <width>71</width>
           <height>25</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>描 述：</string>
+         <string>中文描述</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>130</x>
-          <y>40</y>
+          <x>150</x>
+          <y>30</y>
           <width>21</width>
           <height>25</height>
          </rect>
@@ -210,7 +182,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>80</y>
+          <y>70</y>
           <width>51</width>
           <height>25</height>
          </rect>
@@ -223,7 +195,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>120</y>
+          <y>110</y>
           <width>51</width>
           <height>25</height>
          </rect>
@@ -235,41 +207,104 @@
        <widget class="QTextBrowser" name="text_desc_graf">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>160</y>
+          <x>80</x>
+          <y>150</y>
           <width>221</width>
-          <height>91</height>
+          <height>71</height>
          </rect>
         </property>
        </widget>
        <widget class="QTextBrowser" name="text_type">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>120</y>
+          <x>80</x>
+          <y>110</y>
           <width>81</width>
-          <height>31</height>
+          <height>30</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_a">
+       <widget class="QDoubleSpinBox" name="double_a">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>40</y>
+          <x>80</x>
+          <y>30</y>
           <width>61</width>
           <height>25</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <double>99999.990000000005239</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_b">
+       <widget class="QDoubleSpinBox" name="double_b">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>80</y>
+          <x>80</x>
+          <y>70</y>
           <width>61</width>
           <height>25</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <double>99999.990000000005239</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="text_desc_graf_en">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>230</y>
+          <width>221</width>
+          <height>71</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>230</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>英文描述</string>
         </property>
        </widget>
       </widget>
@@ -278,8 +313,8 @@
         <rect>
          <x>380</x>
          <y>60</y>
-         <width>300</width>
-         <height>260</height>
+         <width>321</width>
+         <height>321</height>
         </rect>
        </property>
        <property name="title">
@@ -333,33 +368,13 @@
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_d1">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>30</y>
-          <width>61</width>
-          <height>25</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_d2">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>70</y>
-          <width>61</width>
-          <height>25</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QTextBrowser" name="text_desc_fhc">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>160</y>
+          <x>80</x>
+          <y>150</y>
           <width>221</width>
-          <height>91</height>
+          <height>71</height>
          </rect>
         </property>
        </widget>
@@ -367,25 +382,170 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>160</y>
-          <width>51</width>
+          <y>150</y>
+          <width>71</width>
           <height>25</height>
          </rect>
         </property>
         <property name="text">
-         <string>描 述：</string>
+         <string>中文描述</string>
         </property>
        </widget>
        <widget class="QTextBrowser" name="text_dradio">
         <property name="geometry">
          <rect>
-          <x>60</x>
+          <x>80</x>
           <y>110</y>
           <width>111</width>
-          <height>31</height>
+          <height>30</height>
          </rect>
         </property>
        </widget>
+       <widget class="QDoubleSpinBox" name="double_d1">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>30</y>
+          <width>61</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <double>99999.990000000005239</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="double_d2">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>70</y>
+          <width>61</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <double>99999.990000000005239</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>70</y>
+          <width>21</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>mm</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>30</y>
+          <width>21</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>mm</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="text_desc_fhc_en">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>230</y>
+          <width>221</width>
+          <height>71</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>230</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>英文描述</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_year">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>20</y>
+         <width>42</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_month">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>20</y>
+         <width>42</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
       </widget>
      </widget>
     </widget>

@@ -8,16 +8,55 @@ desc    :
 import math
 
 # 体积公式
-def vol_1d(d1, radio=1):
-	return vol_3d(d1, d1, d1, radio)
+import re
+import glob
+import pandas as pd
+from base.base import Base
 
-def vol_2d(d1, d2, radio=1):
-	return vol_3d(d1, d2, d2, radio)
+# 公式系数定义
+Vol_Normal = math.pi / 6
+Vol_Thy_479 = 0.479
+Vol_Thy_523 = 0.523
 
-def vol_3d(d1, d2, d3, radio=1):
-	return '{:.3f}'.format(d1*d2*d3*radio)
 
-#class FormulaOB:
+class Formula(Base):
+    def vol_3d(self, d1, d2, d3, radio=Vol_Normal):
+        return float('{:.3f}'.format(d1 * d2 * d3 * radio))
+
+    def update_vol_3d(self, dist1, dist2, dist3, vol, info=None, coeff=Vol_Normal):
+        """
+        更新三径法体积结果值
+        :param dist1: 三径法的长宽高控件，浮点型编辑框
+        :param dist2: 三径法的长宽高控件，浮点型编辑框
+        :param dist3: 三径法的长宽高控件，浮点型编辑框
+        :param vol: 体积控件，浮点型编辑框
+        :param info: 日志信息
+        :param coeff: 倍数，默认是π/6
+        :return: 浮点型体积结果值
+        """
+        d1, d2, d3 = dist1.value(), dist2.value(), dist3.value()
+        v1 = self.vol_3d(d1, d2, d3, coeff)
+        vol.setValue(v1)
+        if v1 != 0:
+            self.log.info(f' {info}体积：{d1} * {d2} * {d3} * {coeff} = {v1}')
+
+    def update_narrow_radio(self, edit1, edit2, edit_radio, info):
+        """
+        更新狭窄比：距离比，面积比
+        :param edit1: 控件1，浮点型编辑框
+        :param edit2: 控件2，浮点型编辑框
+        :param edit_radio: 狭窄比，浮点型编辑框
+        :param info: 日志信息
+        :return:
+        """
+        v1 = edit1.value()
+        v2 = edit2.value()
+        radio = math.fabs(v1-v2)/max(v1, v2) * 100
+        edit_radio.setValue(radio)
+        self.log.info(f' {info}：{v1}/{v2} = {radio}%')
+
+
+
 
 class FormulaOB:
     def EFW_AC_Campbell(self,AC):
@@ -35,7 +74,7 @@ class FormulaOB:
             value = math.exp(0.282*AC-0.00331*AC**2-4.564)*1000
             return value, value*0.146
         else:
-            return None,r"21<=AC<=40"
+            return "/", r"21<=AC<=40"
 
     def EFW_AC_BPD_Hadlock(self,AC,BPD):
         """
@@ -66,7 +105,7 @@ class FormulaOB:
             value = -3200.40479+157.07186*AC+15.90391*BPD**2
             return value, "/"
         else:
-            return None, r"21.8<=AC<=36.5 and 7<=BPD<=10.5"
+            return "/", r"21.8<=AC<=36.5 and 7<=BPD<=10.5"
 
     def EFW_AC_BPD_Shepard(self,AC,BPD):
         """
@@ -84,7 +123,7 @@ class FormulaOB:
             value = 10**(-1.7492+0.166*BPD+0.046*AC-0.002646*AC*BPD)*1000
             return value, "/"
         else:
-            return None, r"15.50<=AC<=40.00 and 3.1<=BPD<=10.0"
+            return "/", r"15.50<=AC<=40.00 and 3.1<=BPD<=10.0"
         pass
 
     def EFW_AC_FL_Hadlock1(self,AC,FL):
@@ -114,7 +153,7 @@ class FormulaOB:
         :return:
         """
         value = math.exp(5.084820-54.06633*(AC/100)**3-95.80076*(AC/100)**3*math.log1p(AC/100)+3.136370*(HC/100))
-        return value
+        return value, "/"
 
     def EFW_BPD_AC_FL_Hadlock2(self,BPD,AC,FL):
         """
@@ -307,3 +346,34 @@ class FormulaOB:
         """
         value = 5381.193+150.324*HC+2.069*FL**3+0.0232*AC**3-6235.478*math.log10(HC)
         return value, "/"
+
+
+class TableMerge:
+    def get_fml_name(self,path):
+        str = '.*_'+item+'_(.*)_.*_.*_'
+        #str = r'.*_(.*)_.*_X10'
+        patterm = re.compile(str)
+        fml = patterm.findall(path)[0]
+        return fml
+
+    def merge(self, dir, item):
+        file_new = dir + r'.xlsx'
+        writer = pd.ExcelWriter(file_new)
+        file_type = dir + r'\*.xlsx'
+        file_list = glob.glob(file_type)
+        print("***",file_new, file_type)
+        #file_new = f"{dir}\{item}.xlsx"
+        #file_list = glob.glob(r"F:\12-开立\计算公式\孕龄表格\AC\*.xlsx")
+        for file in file_list:
+            df = pd.read_excel(file)
+            # 提取文件名
+            fname = self.get_fml_name(file)
+            print(file, fname)
+            df.to_excel(writer, sheet_name=fname, index=False)
+        writer.save()
+
+
+if __name__ == '__main__':
+    dir = r'F:\12-开立\计算公式\孕龄表格\AC'
+    item = 'AC'
+    TableMerge().merge(dir, item)
