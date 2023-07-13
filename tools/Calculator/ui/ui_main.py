@@ -14,39 +14,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1177, 802)
+        MainWindow.resize(1220, 806)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
-        self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 1151, 731))
+        self.stackedWidget.setGeometry(QtCore.QRect(0, 0, 1151, 761))
         font = QtGui.QFont()
         font.setPointSize(9)
         self.stackedWidget.setFont(font)
         self.stackedWidget.setObjectName("stackedWidget")
-        self.page_abd = Abd()
-        self.page_abd.setObjectName("page_abd")
-        self.stackedWidget.addWidget(self.page_abd)
-        self.page_ob = Ob()
-        self.page_ob.setObjectName("page_ob")
-        self.stackedWidget.addWidget(self.page_ob)
-        self.page_gyn = Gyn()
-        self.page_gyn.setObjectName("page_gyn")
-        self.stackedWidget.addWidget(self.page_gyn)
-        self.page_card = Card()
-        self.page_card.setObjectName("page_card")
-        self.stackedWidget.addWidget(self.page_card)
-        self.page_vas = Vas()
-        self.page_vas.setObjectName("page_vas")
-        self.stackedWidget.addWidget(self.page_vas)
-        self.page_uro = Uro()
-        self.page_uro.setObjectName("page_uro")
-        self.stackedWidget.addWidget(self.page_uro)
-        self.page_smp = Smp()
-        self.page_smp.setObjectName("page_smp")
-        self.stackedWidget.addWidget(self.page_smp)
-        self.page_ped = Ped()
-        self.page_ped.setObjectName("page_ped")
-        self.stackedWidget.addWidget(self.page_ped)
+        self.page_depart = Depart()
+        self.page_depart.setObjectName("page_depart")
+        self.stackedWidget.addWidget(self.page_depart)
         self.page_zscore = ZScore()
         self.page_zscore.setObjectName("page_zscore")
         self.stackedWidget.addWidget(self.page_zscore)
@@ -55,7 +34,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.page_ga)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1177, 27))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1220, 27))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.menubar.setFont(font)
@@ -91,14 +70,9 @@ class Ui_MainWindow(object):
         self.menu_zscore.setObjectName("menu_zscore")
         self.menu_ga = QtWidgets.QAction(MainWindow)
         self.menu_ga.setObjectName("menu_ga")
-        self.menu.addAction(self.menu_abd)
-        self.menu.addAction(self.menu_ob)
-        self.menu.addAction(self.menu_gyn)
-        self.menu.addAction(self.menu_card)
-        self.menu.addAction(self.menu_vas)
-        self.menu.addAction(self.menu_uro)
-        self.menu.addAction(self.menu_smp)
-        self.menu.addAction(self.menu_ped)
+        self.menu_depart = QtWidgets.QAction(MainWindow)
+        self.menu_depart.setObjectName("menu_depart")
+        self.menu.addAction(self.menu_depart)
         self.menu_2.addAction(self.menu_zscore)
         self.menu_2.addAction(self.menu_ga)
         self.menubar.addAction(self.menu.menuAction())
@@ -122,11 +96,7 @@ class Ui_MainWindow(object):
         self.menu_ped.setText(_translate("MainWindow", "儿科"))
         self.menu_zscore.setText(_translate("MainWindow", "心脏Z评分"))
         self.menu_ga.setText(_translate("MainWindow", "产科孕龄"))
-from depart.Abd import Abd
-from depart.Card import Card, ZScore
-from depart.Gyn import Gyn
-from depart.Ob import GA, Ob
-from depart.Ped import Ped
-from depart.Smp import Smp
-from depart.Uro import Uro
-from depart.Vas import Vas
+        self.menu_depart.setText(_translate("MainWindow", "科室测量"))
+from depart.Card import ZScore
+from depart.Depart import Depart
+from depart.Ob import GA

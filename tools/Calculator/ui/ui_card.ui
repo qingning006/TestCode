@@ -13,65 +13,37 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QTabWidget" name="tabWidget">
+  <widget class="QTabWidget" name="tabWidget_2">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>1001</width>
-     <height>521</height>
+     <width>971</width>
+     <height>461</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="currentIndex">
     <number>0</number>
    </property>
-   <widget class="QWidget" name="tab_card">
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
+   <widget class="QWidget" name="tab_ob_b">
     <attribute name="title">
-     <string>心脏</string>
+     <string>B模式</string>
     </attribute>
-    <widget class="QTabWidget" name="tabWidget_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>971</width>
-       <height>461</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <widget class="QWidget" name="tab_ob_b">
-      <attribute name="title">
-       <string>B模式</string>
-      </attribute>
-     </widget>
-     <widget class="QWidget" name="tab_ob_d">
-      <attribute name="title">
-       <string>D模式</string>
-      </attribute>
-     </widget>
-     <widget class="QWidget" name="tab_ob_m">
-      <attribute name="title">
-       <string>M模式</string>
-      </attribute>
-     </widget>
-    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_ob_d">
+    <attribute name="title">
+     <string>D模式</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_ob_m">
+    <attribute name="title">
+     <string>M模式</string>
+    </attribute>
    </widget>
   </widget>
  </widget>

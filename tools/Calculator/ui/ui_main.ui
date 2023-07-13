@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1177</width>
-    <height>802</height>
+    <width>1220</width>
+    <height>806</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>1151</width>
-      <height>731</height>
+      <height>761</height>
      </rect>
     </property>
     <property name="font">
@@ -28,14 +28,7 @@
       <pointsize>9</pointsize>
      </font>
     </property>
-    <widget class="Abd" name="page_abd"/>
-    <widget class="Ob" name="page_ob"/>
-    <widget class="Gyn" name="page_gyn"/>
-    <widget class="Card" name="page_card"/>
-    <widget class="Vas" name="page_vas"/>
-    <widget class="Uro" name="page_uro"/>
-    <widget class="Smp" name="page_smp"/>
-    <widget class="Ped" name="page_ped"/>
+    <widget class="Depart" name="page_depart"/>
     <widget class="ZScore" name="page_zscore"/>
     <widget class="GA" name="page_ga"/>
    </widget>
@@ -45,7 +38,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1177</width>
+     <width>1220</width>
      <height>27</height>
     </rect>
    </property>
@@ -63,14 +56,7 @@
     <property name="title">
      <string> 科室测量 </string>
     </property>
-    <addaction name="menu_abd"/>
-    <addaction name="menu_ob"/>
-    <addaction name="menu_gyn"/>
-    <addaction name="menu_card"/>
-    <addaction name="menu_vas"/>
-    <addaction name="menu_uro"/>
-    <addaction name="menu_smp"/>
-    <addaction name="menu_ped"/>
+    <addaction name="menu_depart"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
@@ -133,56 +119,13 @@
     <string>产科孕龄</string>
    </property>
   </action>
+  <action name="menu_depart">
+   <property name="text">
+    <string>科室测量</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>Smp</class>
-   <extends>QWidget</extends>
-   <header>depart.Smp</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Abd</class>
-   <extends>QWidget</extends>
-   <header>depart.Abd</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Gyn</class>
-   <extends>QWidget</extends>
-   <header>depart.Gyn</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Card</class>
-   <extends>QWidget</extends>
-   <header>depart.Card</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Vas</class>
-   <extends>QWidget</extends>
-   <header>depart.Vas</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Ob</class>
-   <extends>QWidget</extends>
-   <header>depart.Ob</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Uro</class>
-   <extends>QWidget</extends>
-   <header>depart.Uro</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Ped</class>
-   <extends>QWidget</extends>
-   <header>depart.Ped</header>
-   <container>1</container>
-  </customwidget>
   <customwidget>
    <class>ZScore</class>
    <extends>QWidget</extends>
@@ -193,6 +136,12 @@
    <class>GA</class>
    <extends>QWidget</extends>
    <header>depart.Ob</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Depart</class>
+   <extends>QWidget</extends>
+   <header>depart.Depart</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

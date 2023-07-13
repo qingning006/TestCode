@@ -9,6 +9,8 @@ class Calculator(QMainWindow):
 		# 实例化一个 Ui_MainWindow对象
 		self.ui = ui_main.Ui_MainWindow()
 		self.ui.setupUi(self)
+		self.setWindowTitle("测量计算器V1.0")
+		# self.setFont()
 		# 这里使用的是 self.show(),和之后的区分一下
 		self.show()
 
@@ -16,16 +18,9 @@ class Calculator(QMainWindow):
 		self.depart_change()
 
 		#设置菜单栏动作触发信号triggled()
-		self.ui.menu_abd.triggered.connect(self.depart_abd)
-		self.ui.menu_ob.triggered.connect(self.depart_ob)
-		self.ui.menu_gyn.triggered.connect(self.depart_gyn)
-		self.ui.menu_card.triggered.connect(self.depart_card)
-		self.ui.menu_vas.triggered.connect(self.depart_vas)
-		self.ui.menu_uro.triggered.connect(self.depart_uro)
-		self.ui.menu_smp.triggered.connect(self.depart_smp)
-		self.ui.menu_ped.triggered.connect(self.depart_ped)
 		self.ui.menu_zscore.triggered.connect(self.meas_zscore)
 		self.ui.menu_ga.triggered.connect(self.meas_ga)
+		self.ui.menu_depart.triggered.connect(self.meas_depart)
 
 	def depart_change(self, index=0):
 		print("depart_change")
@@ -68,6 +63,9 @@ class Calculator(QMainWindow):
 
 	def meas_ga(self):
 		self.ui.stackedWidget.setCurrentWidget(self.ui.page_ga)
+
+	def meas_depart(self):
+		self.ui.stackedWidget.setCurrentWidget(self.ui.page_depart)
 
 
 if __name__ == '__main__':

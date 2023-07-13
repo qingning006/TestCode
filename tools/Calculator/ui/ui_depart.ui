@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1226</width>
+    <height>747</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1201</width>
+     <height>721</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="Abd" name="tab_abd">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <attribute name="title">
+     <string>腹部</string>
+    </attribute>
+   </widget>
+   <widget class="Ob" name="tab_ob">
+    <attribute name="title">
+     <string>产科</string>
+    </attribute>
+   </widget>
+   <widget class="Gyn" name="tab_gyn">
+    <attribute name="title">
+     <string>妇科</string>
+    </attribute>
+   </widget>
+   <widget class="Card" name="tab_card">
+    <attribute name="title">
+     <string>心脏</string>
+    </attribute>
+   </widget>
+   <widget class="Vas" name="tab_vas">
+    <attribute name="title">
+     <string>血管</string>
+    </attribute>
+   </widget>
+   <widget class="Uro" name="tab_uro">
+    <attribute name="title">
+     <string>泌尿</string>
+    </attribute>
+   </widget>
+   <widget class="Smp" name="tab_smp">
+    <attribute name="title">
+     <string>小器官</string>
+    </attribute>
+   </widget>
+   <widget class="Ped" name="tab_ped">
+    <attribute name="title">
+     <string>儿科</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_lung">
+    <attribute name="title">
+     <string>肺</string>
+    </attribute>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Abd</class>
+   <extends>QWidget</extends>
+   <header>depart.Abd</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Gyn</class>
+   <extends>QWidget</extends>
+   <header>depart.Gyn</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Ob</class>
+   <extends>QWidget</extends>
+   <header>depart.Ob</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Card</class>
+   <extends>QWidget</extends>
+   <header>depart.Card</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Vas</class>
+   <extends>QWidget</extends>
+   <header>depart.Vas</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Uro</class>
+   <extends>QWidget</extends>
+   <header>depart.Uro</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Smp</class>
+   <extends>QWidget</extends>
+   <header>depart.Smp</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Ped</class>
+   <extends>QWidget</extends>
+   <header>depart.Ped</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
